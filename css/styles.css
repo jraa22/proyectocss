@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+body {
+  padding: 0; 
+  font-family: 'Dancing Script', cursive;
+  background-color: #02010a;
+}
+
+.contenedor{
+	width: 900px;
+	margin: 0 auto;
+  animation: slidein 1s;
+}
+
+@-webkit-keyframes slidein{
+  0%{
+    margin-top: 150%;
+  }
+
+  60%{
+    margin-top: -5%;
+  }
+
+  100%{
+    margin-top: 0%;
+  }
+}
+
+.wrapper {
+  display: flex;  
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.header {
+  background: #5b7989;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 10px 10px 0px 0px;
+  text-decoration: none;
+}
+
+.header h1{
+	color: white;
+	width: 65%;
+	text-align: left;
+	order: 1;
+	-webkit-filter: drop-shadow(2px 2px 2px #02010a);
+	filter: drop-shadow(2px 2px 2px #02010a);
+}
+
+.header nav{
+	order: 2;
+	margin: 0;
+	padding: 0;
+	display: block;
+	overflow: hidden;
+	width: 35%;
+}
+
+.header nav ul{
+	
+	list-style-type: none;
+	display: flex;
+	text-align: right;
+	justify-content: space-around;
+}
+
+nav ul li{
+	padding: 10px;
+	flex-flow: row wrap;
+}
+
+.header ul li a{
+	color: white;
+	font-size: 1.2em;
+}
+
+.footer {
+	width: 100%;
+	border-radius: 0 0 10px 10px;
+	background: #C6d5c5;
+	text-align: left;
+}
+
+.main{
+	text-align: center;
+  	background: #82c3a6;
+  	padding: 1%;
+  	width: 100%;
+}
+
+.main img{
+	width: 100%;
+	text-align: center;
+}
+
+.aside {
+  background: #d5c75f;
+  border: 1px solid;
+  width: 46%;
+  padding: 1%;
+  
+}
+
+.aside-1:hover{
+	transform: rotate(10deg);
+	-webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+	filter: drop-shadow(2px 2px 2px #82c3a6);
+	transition: transform 1s;
+}
+
+.aside-2:hover{
+	transform: translate(5px, -20px);
+	-webkit-filter: drop-shadow(2px 2px 2px #82c3a6);
+	filter: drop-shadow(2px 2px 2px #82c3a6);
+	transition: transform 1s;
+}
+.aside-1 img, .aside-2 img{
+	width: 100%;
+}
+
+.columna{
+	width: 20%;
+	text-align: left;
+	padding: 1.25%;
+}
+
+.third{
+  width: 32.3%;
+  margin: .5%;
+}
+
+.third:nth-child(1){
+  filter: blur(20px);
+}
+
+.third:nth-child(even){
+  filter: grayscale(100%);
+}
+
+.third:nth-child(3){
+  filter: sepia(90%);
+}
+
+
+@media all and (max-width: 899px) {
+  .header{
+  	text-align: center;
+  	flex-direction: column wrap;
+  	text-decoration: underline;
+  }
+  .header h1{
+  	width: 100%;
+  	text-align: center;
+  }
+  .header nav{
+  	width: 100%;
+  }
+  .header nav ul{
+  	width: 100%;
+  	padding: 0;
+  	margin: 0;
+  }
+
+  .main{
+  	padding: 10px;
+  }
+  .contenedor{
+  	width: 100%;
+  }
+
+  .aside { flex: 1 auto; }
+  .aside, .columna{
+  	flex-flow: column;
+  	width: 100%;
+  }
+
+  .third{
+    width: 100%;
+  }
+  
+}
+
+
+
